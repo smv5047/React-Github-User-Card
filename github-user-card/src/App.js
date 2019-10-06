@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import UserCard from './components/UserCard'
 import styled from 'styled-components'
+import FollowerList from './components/FollowerList';
 
 const Style = styled.div`
   margin: 0 auto;
@@ -44,11 +45,13 @@ class App extends React.Component {
   }
 
 
+
 render(){
   return (
     <Style>
       <h1>GitHub Cards</h1>
       <UserCard user={this.state}/>
+      <FollowerList user={this.state}/>
       
     </Style>
   );
