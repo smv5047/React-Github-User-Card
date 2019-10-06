@@ -9,7 +9,7 @@ const Style = styled.div`
     justify-content: center;
     background: #7871AA;
     box-shadow: 1px 1px 5px;
-    width: 80%;
+    width: 100%;
         &>div{
             width: 45%;
             
