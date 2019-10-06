@@ -7,7 +7,11 @@ class App extends React.Component {
     super()
     this.state={
       user: 'smv5047',
-      name: 'this.state.name'
+      name: 'this.state.name',
+      image: 'this.state.image',
+      follower_count: 'this.state.follower_count',
+      followers: 'this.state.followers',
+      location: 'this.state.location'
     }
   }
 
@@ -37,6 +41,7 @@ render(){
     <>
     <h1>GitHub Cards</h1>
     <h2>{this.state.name}</h2>
+    <img src={this.state.image} alt={this.state.name}/>
     </>
   );
 }
