@@ -1,6 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import UserCard from './components/UserCard'
+import styled from 'styled-components'
+
+const Style = styled.div`
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+`
 
 class App extends React.Component {
   constructor(){
@@ -38,11 +46,11 @@ class App extends React.Component {
 
 render(){
   return (
-    <>
-    <h1>GitHub Cards</h1>
-    <h2>{this.state.name}</h2>
-    <img src={this.state.image} alt={this.state.name}/>
-    </>
+    <Style>
+      <h1>GitHub Cards</h1>
+      <UserCard user={this.state}/>
+      
+    </Style>
   );
 }
 }
