@@ -11,6 +11,7 @@ const Style = styled.div`
     img {
         max-width: 150px;
         max-height: 150px;
+        border-radius: 200px;
     }
    
     

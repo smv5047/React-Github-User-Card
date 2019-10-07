@@ -9,6 +9,11 @@ const Style = styled.div`
   margin: 0 auto;
   width: 80%;
   text-align: center;
+
+  input {
+    margin: 20px 0;
+    text-align: center;
+  }
 `
 
 class App extends React.Component {
@@ -44,12 +49,26 @@ class App extends React.Component {
       })
   }
 
+    handleSubmit = (event) =>{
+      this.setState({
+        user: event.target.value
+      })
+    }
+
+    componentDidUpdate(){
+      this.fetchGitHub()
+    }
 
 
 render(){
   return (
     <Style>
       <h1>GitHub Cards</h1>
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" placeholder={this.state.name}/>
+        <button>Get Your Github Cards</button>
+      </form>
+      
       <UserCard user={this.state}/>
       <FollowerList user={this.state}/>
       

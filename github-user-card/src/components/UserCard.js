@@ -14,14 +14,9 @@ const Style = styled.div`
             width: 45%;
             
         }
-        h1{
-            
+        img{
+            border-radius: 200px;
         }
-        
-    }
-
-
-
 `
 
 
